@@ -1,12 +1,14 @@
 Role Name
 =========
+**vpc-role** is an ansible role that automates the (de)provisioning of AWS Virtual Private Clouds and other resources necessary for the efficient functioning of a VPC.
 
-A brief description of the role goes here.
+In essence, this role manages the creation/deletion of a VPC, subnets, internet gateway and route tables. Thus giving you the ability to easiy standardise your cloud infrastructure across several accounts in your AWS Organisation.
+
 
 Requirements
 ------------
 
-To run this role you will need an AWS account.
+To run this role you will need an AWS account. Also, boto3 must be installed on your system.
 
 Role Variables
 --------------
