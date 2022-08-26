@@ -44,4 +44,4 @@
     state: present
     tags:
       name: "{{ igw_name }}"
-    register: igw_result
+  register: igw_result
