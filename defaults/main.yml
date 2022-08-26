@@ -1,7 +1,8 @@
 ---
 # defaults file for vpcyaml
 
-vpc_name: "My_Test_VPC"
-vpc_desc: "This VPC was created using an Ansible role"
-vpc_tenancy: "default"
-
+access_key: ""
+secret_key: ""
+region: us-east-1
+az1: us-east-1a
+az2: us-east-1b
