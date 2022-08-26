@@ -1,2 +1,7 @@
 ---
 # defaults file for vpcyaml
+
+vpc_name: "My_Test_VPC"
+vpc_desc: "This VPC was created using an Ansible role"
+vpc_tenancy: "default"
+
