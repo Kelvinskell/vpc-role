@@ -31,10 +31,10 @@ There are no dependencies for this role.
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+      - name: A Playbook To Automate The Provisioning Of AWS VPCs And Related Resources.
+        hosts: localhost
+        roles:
+          - vpc-role
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
 
 
