@@ -1,2 +1,18 @@
 ---
 # tasks file for vpcyaml
+
+# create the VPC
+- name: Create a VPC
+  ec2_vpc_net:
+    name: "{{ vpc_name }}"
+    cidr_block: "{{ vpc_cidr }}"
+    region: "{{ region }}"
+    state: "{{ vpc_state }}"
+    aws_access_key: "{{ access_key }}"
+    aws_secret_key: "{{ secret_key }}"
+    tags:
+      name: "{{ vpc_name }}"
+      description: "{{ vpc_desc }}"
+    tenancy: "{{ vpc_tenancy }}"
+
+
