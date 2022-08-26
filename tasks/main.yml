@@ -30,7 +30,7 @@
     cidr: "{{ subnet1_cidr }}"
     map_public: yes
     wait: yes
-    state: present
+    state: "{{ subnet1_state }}"
     vpc_id: "{{ vpc_result.vpc.id }}"
     tags: 
       Name: "{{ vpc_name }}-subnet1"

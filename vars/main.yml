@@ -10,4 +10,5 @@ vpc_desc: "This VPC was created using an Ansible role"
 vpc_tenancy: "default"
 
 # Subnet Vars
-subnet1_cidr: 12.0.1.0/24
+subnet1_cidr: "12.0.1.0/24"
+subnet1_state: "absent"
