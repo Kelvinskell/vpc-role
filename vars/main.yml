@@ -1,11 +1,14 @@
 ---
 # vars file for vpcyaml
 
-# General Vars
-access_key: ""
-secret_key: ""
-region: us-east-1
 
 # VPC Vars
 vpc_cidr: "12.0.0.0/16"
 vpc_state: "absent"
+vpc_name: "My_Test_VPC"
+vpc_desc: "This VPC was created using an Ansible role"
+vpc_tenancy: "default"
+
+# Subnet Vars
+subnet1_cidr: 12.10.10.0/24
+subnet1_state: present
