@@ -17,3 +17,6 @@ subnet1_state: "present"
 igw_name: "My-Test-Gateway"
 igw_state: "present"
 
+# Route Vars
+route_state: "present"
+

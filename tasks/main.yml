@@ -34,10 +34,6 @@
   register: subnet1_result
   when: vpc_result.vpc.id is defined
 
-- name: Show
-  debug: 
-    var=subnet1_result
-
 # Create An Internet Gateway
 - name: Create IGW
   ec2_vpc_igw:
@@ -52,10 +48,20 @@
   when: vpc_result.vpc.id is defined
 
 # Create Route
-#- name: Create a public route
-#  ec2_vpc_route_table:
-#   aws_access_key: "{{ access_key }}"
-#   aws_secret_key: "{{ secret_key }}"
-#   region: "{{ region }}"
+- name: Create a public route
+  ec2_vpc_route_table:
+    aws_access_key: "{{ access_key }}"
+    aws_secret_key: "{{ secret_key }}"
+    region: "{{ region }}"
+    vpc_id: "{{ vpc_result.vpc.id }}"
+    subnets: "{{ subnet1_result.subnet.id }}"
+    routes:
+      - dest: 0.0.0.0/0
+        gateway_id: "{{ igw_result.gateway_id }}"
+    tags: 
+      Name: My-Pub-Route
+    state: "{{ route_state }}"
+  register: route_result
+  when: subnet1_result.subnet.id is defined
 
 
