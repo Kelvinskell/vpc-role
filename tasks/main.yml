@@ -15,6 +15,10 @@
       Description: "{{ vpc_desc }}"
     tenancy: "{{ vpc_tenancy }}"
   register: vpc_result
+
+- name: Show
+  debug:
+    var: vpc_result.vpc.id
   
 # Create A Subnet
 - name: Create a subnet
@@ -23,15 +27,16 @@
     aws_secret_key: "{{ secret_key }}"
     region: "{{ region }}"
     az: "{{ az1 }}"
-    cidr: "{{ subnet1_cidr }]"
+    cidr: "{{ subnet1_cidr }}"
     map_public: yes
     wait: yes
-    state: "{{ subnet1_state }}"
-    vpc_id: vpc_result.vpc_id
+    state: present
+    vpc_id: "{{ vpc_result.vpc.id }}"
     tags: 
       Name: "{{ vpc_name }}-subnet1"
       Purpose: "Public_subnet" 
-    when: vpc_result.vpc_id is defined
+  register: subnet1_result
+  when: vpc_result.vpc.id is defined
 
 
 
