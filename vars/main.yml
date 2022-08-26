@@ -15,4 +15,5 @@ subnet1_state: "present"
 
 # IGW Vars
 igw_name: "My-Test-Gateway"
+igw_state: "present"
 
