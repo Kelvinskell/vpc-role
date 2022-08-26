@@ -11,8 +11,8 @@
     aws_access_key: "{{ access_key }}"
     aws_secret_key: "{{ secret_key }}"
     tags:
-      name: "{{ vpc_name }}"
-      description: "{{ vpc_desc }}"
+      Name: "{{ vpc_name }}"
+      Description: "{{ vpc_desc }}"
     tenancy: "{{ vpc_tenancy }}"
 
 
