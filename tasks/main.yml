@@ -34,5 +34,14 @@
   register: subnet1_result
   when: vpc_result.vpc.id is defined
 
-
-
+# Create An Internet Gateway
+- name: Create IGW
+  ec2_vpc_igw:
+    aws_access_key: "{{ access_key }}"
+    aws_secret_key: "{{ secret_key }}"
+    region: "{{ region }}"
+    vpc_id: "{{ vpc_result.vpc.id }}"
+    state: present
+    tags:
+      name: "{{ igw_name }}"
+    register: igw_result
