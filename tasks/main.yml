@@ -15,7 +15,21 @@
       Description: "{{ vpc_desc }}"
     tenancy: "{{ vpc_tenancy }}"
   register: vpc_result
-
+  
 # Create A Subnet
+- name: Create a subnet
+  ec2_vpc_subnet:
+    aws_access_key: "{{ access_key }}"
+    aws_secret_key: "{{ secret_key }}"
+    region: "{{ region }}"
+    az: "{{ az1 }}"
+    cidr: "{{ subnet1_cidr }]"
+    map_public: yes
+    wait: yes
+    state: "{{ subnet1_state }}"
+    tags: 
+      Name: "{{ vpc_name }}-subnet1"
+      Purpose: "Public_subnet" 
+
 
 
