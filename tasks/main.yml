@@ -1,7 +1,7 @@
 ---
 # tasks file for vpcyaml
 
-# create the VPC
+# Create The VPC
 - name: Create a VPC
   ec2_vpc_net:
     name: "{{ vpc_name }}"
@@ -14,5 +14,8 @@
       Name: "{{ vpc_name }}"
       Description: "{{ vpc_desc }}"
     tenancy: "{{ vpc_tenancy }}"
+  register: vpc_result
+
+# Create A Subnet
 
 

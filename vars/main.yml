@@ -1,9 +1,11 @@
 ---
 # vars file for vpcyaml
 
-# VPC Vars
+# General Vars
 access_key: ""
 secret_key: ""
 region: us-east-1
+
+# VPC Vars
 vpc_cidr: "12.0.0.0/16"
-vpc_state: "present"
+vpc_state: "absent"
