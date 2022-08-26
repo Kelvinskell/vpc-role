@@ -16,10 +16,6 @@
     tenancy: "{{ vpc_tenancy }}"
   register: vpc_result
 
-- name: Show
-  debug:
-    var: vpc_result.vpc.id
-  
 # Create A Subnet
 - name: Create a subnet
   ec2_vpc_subnet:
