@@ -1,6 +1,6 @@
 Role Name
 =========
-**vpc-role** is an ansible role that automates the (de)provisioning of AWS Virtual Private Clouds and other resources necessary for the efficient functioning of a VPC.
+**vpc-role** is an Ansible Role that automates the (de)provisioning of AWS Virtual Private Clouds and other resources necessary for the efficient functioning of a VPC.
 
 In essence, this role manages the creation/deletion of a VPC, subnets, internet gateway and route tables. Thus giving you the ability to easily standardise your cloud infrastructure across several accounts in your AWS Organisation.
 
