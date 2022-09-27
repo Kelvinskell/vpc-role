@@ -15,7 +15,7 @@ Role Variables
 This role uses a number of variables in order to determine the flow of execution of the tasks contained within it.
 
 In the `defaults` directory, there are a number of variables:
-- access_key: Your AWS access key
+- access_key: Your AWS access key.
 - secret key: Your aws secret key.
 - region: The specified region for the VPC to reside in.
 - az1 & az2: Availability Zones in which the subnets will reside.
